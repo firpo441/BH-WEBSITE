@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Bella's Heights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif; /* Consistent font family for the whole page */
+      background: #87CEEB;
+      color: black;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .logo-text h1 {
+      font-family: 'Quicksand', sans-serif; /* Consistent font for the header */
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+      background: grey;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    .login-link {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      background: black;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-link:hover {
+      background: white;
+      color: black;
+    }
+
+    main {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .contact-box {
+      background: grey;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-box h2 {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .contact-box button {
+      background: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-box button:hover {
+      background: white;
+      color: black;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    .info a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 50px;
+    }
+
+    .social-icons a img {
+      width: 50px; /* Increased icon size */
+      margin: 0 10px;
+      filter: brightness(1.2);
+      transition: transform 0.3s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .login-link {
+        position: static;
+        display: block;
+        margin: 15px auto 0;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-text">
+      <h1>Bella's Heights</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="final heights.html">Home</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Login.html">Login/Sign Up</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <main>
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <form action="submit-contact-form.html" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div style="margin-top: 20px;">
+        <a href="feedback.html">
+          <button style="background-color: black; color:white;">Leave Feedback</button>
+        </a>
+        <div class="info">
+          <p>Email: 
+            <a href="mailto:bellasheights@gmail.com">bellasheights@gmail.com</a>
+          </p>
+          <p>Phone: 
+            <a href="https://wa.me/256745364146?text=Hello%20and%20welcome%20to%20Bella's%20Heights!%20How%20can%20we%20help%20you%20today?" target="_blank">
+              +256 745 273049
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/256123456789" aria-label="WhatsApp">
+        <img src="watsapp.png" alt="WhatsApp" />
+      </a>
+      <a href="https://messenger.com/yourprofile" aria-label="Facebook">
+        <img src="facebook.png" alt="Facebook" />
+      </a>
+    </div>
+    <p>&copy; 2025 Bella's Heights. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

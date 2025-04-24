@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Explore the luxurious services offered by Bella's Heights. Book rooms, spa, dining, and more." />
+  <meta property="og:image" content="path_to_image.jpg" />
+  <title>Services - Bella's Heights</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #87CEEB;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: gray;
+      color: white;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .logo img {
+      max-width: 130px;
+      height: auto;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    header nav ul li {
+      margin: 4px 12px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .services-container {
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    .services-container h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .service-card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 30%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card img {
+      width: 100%;
+      max-width: 260px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .service-card .price-tag {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .book-now {
+      display: inline-block;
+      background-color: #ff6600;
+      color: white;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .book-now:hover {
+      background-color: #cc5200;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: gray;
+      color: white;
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .service-card {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .service-card img {
+        height: 140px;
+      }
+
+      .services-container h2 {
+        font-size: 24px;
+      }
+
+      .service-card h3 {
+        font-size: 20px;
+      }
+
+      .service-card p,
+      .service-card .price-tag {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="STK-20250417-WA0001 (3).webp" alt="Hotel Logo" />
+    </div>
+    <h1>Bella's Heights - Our Services</h1>
+<nav>
+            <ul>
+                <li><a href="final Heights.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Login.html">Login/Sign Up</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+</nav>
+  </header>
+
+  <section class="services-container">
+    <h2>Our Premium Services</h2>
+
+    <div class="service-card">
+      <img src="vip.jpg" alt="VIP Room" />
+      <h3>VIP Room</h3>
+      <p>Experience the height of luxury in our VIP rooms. Designed for maximum comfort and elegance, enjoy world-class amenities and a breathtaking view.</p>
+      <div class="price-tag">UGX400000 per night</div>
+      <a href="Booking.html?room=vip" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="double room.png" alt="Double Room" />
+      <h3>Double Room</h3>
+      <p>Perfect for couples or friends, our double rooms combine comfort and modernity, equipped with everything you need for a pleasant stay.</p>
+      <div class="price-tag">UGX250000 per night</div>
+      <a href="Booking.html?room=double" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="single.jpg" alt="Single Room" />
+      <h3>Single Room</h3>
+      <p>Our single rooms are ideal for solo travelers, offering a peaceful and comfortable environment to relax after a busy day.</p>
+      <div class="price-tag">UGX100000 per night</div>
+      <a href="Booking.html?room=single" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="SPA.jpg" alt="Spa" />
+      <h3>Spa</h3>
+      <p>Relax and rejuvenate with a luxurious spa treatment. From massages to facials, our spa services are designed to pamper you.</p>
+      <div class="price-tag">UGX95000 per session</div>
+      <a href="Booking.html?service=spa" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="GYM.jpg" alt="Gym" />
+      <h3>Gym</h3>
+      <p>Stay fit even while on vacation! Our gym is fully equipped with the latest machines, ensuring a great workout experience.</p>
+      <div class="price-tag">UGX70000 per session</div>
+      <a href="Booking.html?service=gym" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="CONFERENCE.jpg" alt="Conference Room" />
+      <h3>Conference Room</h3>
+      <p>Host your meetings or conferences in our fully equipped conference room. A professional setting perfect for any business occasion.</p>
+      <div class="price-tag">UGX520000 per day</div>
+      <a href="Booking.html?service=conference" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="Restaurant.webp" alt="Restaurant" />
+      <h3>Restaurant</h3>
+      <p>Indulge in delectable meals from around the world at our restaurant. Offering an exquisite dining experience with a variety of options to suit all tastes.</p>
+      <div class="price-tag">Meals starting at UGX20000</div>
+      <a href="Booking.html?service=restaurant" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="swimming pool.webp" alt="Swimming Pool" />
+      <h3>Swimming Pool</h3>
+      <p>Cool off in our sparkling swimming pool or unwind with a cocktail by the poolside. Perfect for a refreshing day under the sun.</p>
+      <div class="price-tag">UGX80000 per day</div>
+      <a href="Booking.html?service=pool" class="book-now">Book Now</a>
+    </div>
+
+    <div class="service-card">
+      <img src="Gardens.webp" alt="Gardens" />
+      <h3>Gardens</h3>
+      <p>Take a stroll through our beautifully landscaped gardens, offering a serene environment for relaxation and rejuvenation.</p>
+      <div class="price-tag">Free access</div>
+      <a href="Booking.html?service

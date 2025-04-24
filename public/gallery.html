@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rooms & Facilities Slider - Bella's Heights</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0e0e0e;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+header {
+  background-color: #87CEEB;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    header h1 {
+      font-size: 2em;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    nav {
+       margin-left:auto;
+     }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #00c6ff;
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00c6ff;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .gallery {
+      min-height: 100vh;
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: linear-gradient(to right, #111, #1c1c1c);
+    }
+
+    .gallery h2 {
+      font-size: 3em;
+      margin-bottom: 40px;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+      animation: fadeDown 1s ease-out;
+    }
+
+    .slider-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slide figure {
+      width: 95%;
+      height: 80vh;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .slide:hover img {
+      transform: scale(1.05);
+    }
+
+    .slide figcaption {
+      margin-top: 25px;
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+      animation: fadeUp 1s ease;
+      cursor: pointer;
+    }
+
+    .slider-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .slider-buttons button {
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .slider-buttons button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      nav {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      nav ul {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .gallery h2 {
+        font-size: 2em;
+      }
+
+      .slide figcaption {
+        font-size: 1.3em;
+      }
+
+      .slide figure {
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="STK-20250417-WA0001 (3).webp" alt="Bella's Heights Logo">
+      <h1>Bella's Heights</h1>
+    </div>
+    <nav>
+            <ul>
+                <li><a href="final Heights.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Login.html">Login/Sign Up</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+</nav>
+  </header>
+
+  <section class="gallery">
+    <h2>Rooms & Facilities</h2>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide"><figcaption>VIP Room</figcaption><figure><img src="b.jpg" alt="VIP Room"></figure></div>
+        <div class="slide"><figcaption>Double Room</figcaption><figure><img src="1.webp" alt="Double Room"></figure></div>
+        <div class="slide"><figcaption>Single Room</figcaption><figure><img src="2.jpg" alt="Single Room"></figure></div>
+        <div class="slide"><figcaption>Spa</figcaption><figure><img src="3.jpg" alt="Spa"></figure></div>
+        <div class="slide"><figcaption>Gym</figcaption><figure><img src="6.webp" alt="Gym"></figure></div>
+        <div class="slide"><figcaption>Conference Room</figcaption><figure><img src="7.webp" alt="Conference Room"></figure></div>
+        <div class="slide"><figcaption>Bar</figcaption><figure><img src="8.jpg" alt="Bar"></figure></div>
+        <div class="slide"><figcaption>Restaurant</figcaption><figure><img src="res.jpg" alt="Restaurant"></figure></div>
+        <div class="slide"><figcaption>Swimming Pool</figcaption><figure><img src="9.jpg" alt="Swimming Pool"></figure></div>
+        <div class="slide"><figcaption>Gardens</figcaption><figure><img src="0.jpg" alt="Gardens"></figure></div>
+      </div>
+      <div class="slider-buttons">
+        <button onclick="prevSlide()">⟨ Prev</button>
+        <button onclick="nextSlide()">Next ⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const track = document.getElementById('sliderTrack');
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function updateSlider() {
+      const width = slides[0].offsetWidth;
+      track.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    window.addEventListener('resize', updateSlider);
+    window.addEventListener('load', updateSlider);
+    setInterval(nextSlide, 5000);
+  </script>
+
+</body>
+</html>

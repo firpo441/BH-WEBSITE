@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking - Bella's Heights</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: gray;
+      padding: 20px;
+      margin: 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 10px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 28px;
+    }
+
+    .form-container, .payment-section {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .form-container h2, .payment-section h2 {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .payment-options {
+      margin-top: 10px;
+    }
+
+    .payment-options p {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .payment-options a {
+      display: inline-block;
+      margin: 5px 0;
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .payment-options a:hover {
+      text-decoration: underline;
+    }
+
+    .payment-options img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Styles for the Thank You Popup */
+    .thank-you-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .thank-you-popup button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .thank-you-popup button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="STK-20250417-WA0001 (3).webp" alt="Bella's Heights Logo">
+    </div>
+    <h1>Bella's Heights - Booking</h1>
+  </header>
+
+  <section id="booking-section" class="form-container">
+    <h2>Book Your Stay or Service</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="Full Name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="Phone Number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="Email Address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="Number of Guests" min="1" value="1" required />
+      </div>
+
+      <div class="form-group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" name="Check-In Date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" name="Check-Out Date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="room-type">Room or Service</label>
+        <select id="room-type" name="Room or Service" required>
+          <optgroup label="Rooms">
+            <option value="single">Single Room - UGX 100,000/night</option>
+            <option value="double">Double Room - UGX 250,000/night</option>
+            <option value="vip">VIP Suite - UGX 400,000/night</option>
+          </optgroup>
+          <optgroup label="Services">
+            <option value="spa">Spa Access - UGX 95,000</option>
+            <option value="gym">Gym Access - UGX 70,000</option>
+            <option value="conference">Conference Room - UGX 520,000/day</option>
+            <option value="bar">Bar Access - Prices vary</option>
+            <option value="restaurant">Restaurant - Meals from UGX 20,000</option>
+            <option value="pool">Swimming Pool - UGX 80,000</option>
+            <option value="garden">Garden Access - Free</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section id="payment-section" class="payment-section hidden">
+    <h2>🎉 Thank You for Booking!</h2>
+    <p style="text-align: center;">Please choose a payment option below:</p>
+    <div class="payment-options">
+      <p><strong>Mobile Money Options:</strong></p>
+      <a href="#" onclick="showThankYouPopup()">
+        <img src="mtn-logo.jpg" alt="MTN Logo" /> 📱 MTN Mobile Money - *165*4*1#
+      </a>
+      <a href="#" onclick="showThankYouPopup()">
+        <img src="airtel-logo.png" alt="Airtel Logo" /> 📱 Airtel Mobile Money - *185#
+      </a>
+
+      <p style="margin-top: 15px;"><strong>Bank Transfer:</strong></p>
+      <p>🏦 Bella's Heights Bank Account:</p>
+      <p>Bank: Equity Bank Uganda</p>
+      <p>Account Name: Bella's Heights Ltd</p>
+      <p>Account Number: 1234567890123</p>
+      <p>Branch: Garden City</p>
+    </div>
+  </section>
+
+  <!-- Thank You Popup -->
+  <div id="thankYouPopup" class="thank-you-popup">
+    <h2>🎉 Payment Successful!</h2>
+    <p>Thank you for your payment. We look forward to welcoming you!</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const bookingSection = document.getElementById('booking-section');
+    const paymentSection = document.getElementById('payment-section');
+    const thankYouPopup = document.getElementById('thankYouPopup');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      bookingSection.classList.add('hidden');
+      paymentSection.classList.remove('hidden');
+      form.reset();
+    });
+
+    function showThankYouPopup() {
+      // Hide payment options and show thank you popup
+      paymentSection.classList.add('hidden');
+      thankYouPopup.style.display = 'block';
+    }
+
+    function closePopup() {
+      thankYouPopup.style.display = 'none';
+      
+    }
+  </script>
+
+</body>
+</html>
